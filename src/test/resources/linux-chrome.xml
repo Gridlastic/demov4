@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Linux-Chrome-Suite" parallel="tests" thread-count="2">
+    <parameter name="browser-name" value="chrome"/>
+    <parameter name="platform-name" value="linux"/>
+    <parameter name="browser-version" value="latest"/>
+    <parameter name="prelaunch-desired-node-count" value="1"/>
+    <parameter name="prelaunch-acceptable-node-count" value="1"/>
+    <parameter name="prelaunch-timeout-in-seconds" value="300"/>
+
+    <test name="Test chrome on linux with screenshot">
+        <parameter name="test-title" value="chrome with screenshot"/>
+        <parameter name="record-video" value="False"/>
+        <classes>
+            <class name="com.gridlastic.demo.TestPrepareEnvironment"/>
+        </classes>
+    </test>
+
+    <test name="Test chrome on linux with video">
+        <parameter name="test-title" value="chrome with video"/>
+        <parameter name="record-video" value="True"/>
+        <classes>
+            <class name="com.gridlastic.demo.TestPrepareEnvironment"/>
+        </classes>
+    </test>
+
+</suite>
