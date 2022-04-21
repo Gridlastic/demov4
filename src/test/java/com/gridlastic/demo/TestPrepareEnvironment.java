@@ -89,16 +89,11 @@ public class TestPrepareEnvironment {
         Thread.sleep(10_000); //slow down for demo purposes
 
 			
-        /*
-			// Take example screenshot and save it to Jenkins workspace			
+   			// Take example screenshot and save it to Jenkins workspace			
 			String screenshot_filepath = System.getenv("WORKSPACE")+"/";
 			String screenshot_filename = "screenshot_" + ((RemoteWebDriver) driver).getSessionId() + ".png";
 			myTestContext.setAttribute("screenshot_url", jenkins_hostname+"/job/"+System.getenv("JOB_NAME")+"/ws/"+screenshot_filename);
 			take_screenshot(screenshot_filepath+screenshot_filename); 
-*/
-			String screenshot_filepath = "C:\\Users\\user-e580\\Desktop\\screenshots\\";		
-			String screenshot_filename = "screenshot_" + ((RemoteWebDriver) driver).getSessionId() + ".png";
-			take_screenshot(screenshot_filepath+test_title+screenshot_filename);
 		
   //      logger.info("Test Method in suite \"{}\" , \"{}\" finished.", myTestContext.getSuite().getName(), test_title);
     }
