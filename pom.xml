@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <seleniumVersion>4.1.3</seleniumVersion>
+        <seleniumVersion>4.1.4</seleniumVersion>
         <jackson.version>2.13.1</jackson.version>
         <logger.version>1.7.36</logger.version>
         <testNgVersion>7.5</testNgVersion>
