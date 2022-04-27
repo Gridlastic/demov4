@@ -22,7 +22,7 @@ import java.util.*;
 
 
 // Notes: parameters are passed in from Jenkins maven job like:
-// goal: test -DseleniumVersion=4.1.3 -DgridUsername=xyx -DgridAccessKey=123 -Dhub=SUBDOMAIN-hub.gridlastic.com -DvideoUrl=https://s3-ap-southeast-2.amazonaws.com/b2729248-ak68-6948-a2y8-80e7479te16a/9ag7b09j-6a38-58w2-bb01-17qw724ce46t 
+// goal: test -DseleniumVersion=4.1.4 -DgridUsername=xyx -DgridAccessKey=123 -Dhub=SUBDOMAIN-hub.gridlastic.com -DvideoUrl=https://s3-ap-southeast-2.amazonaws.com/b2729248-ak68-6948-a2y8-80e7479te16a/9ag7b09j-6a38-58w2-bb01-17qw724ce46t 
 // You will find these parameters in your Gridlastic dashboard after starting your selenium grid
 // Also, the Jenkins hostname is passed in via -DjenkinsHostname from Jenkins maven job
 
