@@ -54,6 +54,8 @@ public class TestPrepareEnvironment {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserVersion", browserVersion);
         options.setCapability("platformName", platformName);
+        
+        options.addArguments("--remote-allow-origins=*"); // necessary for testing with Chrome 111+ for Selenium V4 users unless using selenium version 4.8.2 and above.
 
         //video recording
         if (recordVideo.equalsIgnoreCase("True")) {
