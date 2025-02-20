@@ -69,7 +69,13 @@ public class TestPrepareEnvironment {
         ClientConfig config = ClientConfig.defaultConfig().readTimeout(Duration.ofMinutes(10));
         driver = RemoteWebDriver.builder().address(new URL("https://" + gridUserName + ":" + gridAccessKey + "@" + hubUrl + "/wd/hub")).oneOf(options).config(config).build();
         driver = new Augmenter().augment(driver);
-        driver.manage().window().maximize();
+
+        if (platformName.equalsIgnoreCase("linux")) {
+            options.addArguments(Arrays.asList("--window-position=0,0"));
+            options.addArguments(Arrays.asList("--window-size=1920,1080"));
+        } else {
+            options.addArguments(Arrays.asList("--start-maximized"));
+        }
 
         // Video url
         if (recordVideo.equalsIgnoreCase("True")) {
