@@ -70,7 +70,7 @@ public class TestPrepareEnvironment {
         } else {
             options.addArguments(Arrays.asList("--start-maximized"));
         }
-        
+
         // Increase timeout otherwise there might not be enough time to launch new grid nodes.
         ClientConfig config = ClientConfig.defaultConfig().readTimeout(Duration.ofMinutes(10));
         driver = RemoteWebDriver.builder().address(new URL("https://" + gridUserName + ":" + gridAccessKey + "@" + hubUrl + "/wd/hub")).oneOf(options).config(config).build();
