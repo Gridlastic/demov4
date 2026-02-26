@@ -16,7 +16,6 @@
         </classes>
     </test>
 
-
     <test name="Test chrome on windows 11 with video">
         <parameter name="test-title" value="chrome with video" />
         <parameter name="record-video" value="True" />
