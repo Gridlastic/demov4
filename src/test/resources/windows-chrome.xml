@@ -6,7 +6,7 @@
     <parameter name="browser-version" value="latest"/>
     <parameter name="prelaunch-desired-node-count" value="1"/>
     <parameter name="prelaunch-acceptable-node-count" value="1"/>
-    <parameter name="prelaunch-timeout-in-seconds" value="300"/>
+    <parameter name="prelaunch-timeout-in-seconds" value="600"/>
 
     <test name="Test chrome on windows 11 with screenshot">
         <parameter name="test-title" value="chrome with screenshot" />
