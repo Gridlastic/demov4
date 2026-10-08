@@ -72,10 +72,10 @@ public class TestPrepareEnvironment {
         }
 
         // Increase timeout otherwise there might not be enough time to launch new grid nodes.
-        ClientConfig config = ClientConfig.defaultConfig().readTimeout(Duration.ofMinutes(20));
+        ClientConfig config = ClientConfig.defaultConfig().withRetries().readTimeout(Duration.ofMinutes(20)).connectionTimeout(Duration.ofMinutes(10));
         driver = RemoteWebDriver.builder().address(new URL("https://" + gridUserName + ":" + gridAccessKey + "@" + hubUrl + "/wd/hub")).oneOf(options).config(config).build();
         driver = new Augmenter().augment(driver);
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(5)).implicitlyWait(Duration.ofMinutes(3)).scriptTimeout(Duration.ofMinutes(3));
 
         // Video url
         if (recordVideo.equalsIgnoreCase("True")) {
